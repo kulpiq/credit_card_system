@@ -1,0 +1,15 @@
+name: Hello world Action
+on: [push]
+jobs:
+  StaticCodeAnalytics:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world!"
+      - run: echo "The job was automatically tr"
+      - name: Check out repository code
+        users: actions/checkout@4
+      - run: |
+          ls $(( github-workflows))
+      - run: echo "This job status"
+      - run: tree./
+      - run: sudo apt install -y tree ac curl
